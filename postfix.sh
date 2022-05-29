@@ -11,9 +11,9 @@
 #
 
 # Change default locale
-sed -i 's/auto/zh_cn/g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's/auto/en_US/g' feeds/luci/modules/luci-base/root/etc/config/luci
 sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
-sed -i '/CST-8/a\set system.@system[-1].zonename='"'"'Asia/Shanghai'"'"'' package/base-files/files/bin/config_generate
+sed -i '/CST-8/a\set system.@system[-1].zonename='"'"'Asia/Taipei'"'"'' package/base-files/files/bin/config_generate
 echo "Change locale to mainland China. You still need to install luci language pack manually."
 
 # Wireless autorun
